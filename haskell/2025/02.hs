@@ -20,11 +20,8 @@ partOne = sum . concatMap (map mapper . toRange)
 partTwo :: Input -> Int
 partTwo = sum . concatMap (map mapper . toRange)
   where
-    mapper :: Int -> Int 
-    mapper x = if interesting then x else 0
-      where 
-        str = show x
-        interesting = any (`chunkChecker` str) [1 .. (length str `div` 2)]
-        -- assume sz divides d(x)
-        chunkChecker :: Int -> String -> Bool
-        chunkChecker = allEqual .: chunksOf
+  mapper :: Int -> Int 
+  mapper x = x * fromEnum invalid
+    where 
+    str = show x
+    invalid = any (flip (allEqual .: chunksOf) str) [1 .. (length str `div` 2)]
