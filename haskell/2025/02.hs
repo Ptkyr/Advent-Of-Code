@@ -24,4 +24,4 @@ partTwo = sum . concatMap (map mapper . toRange)
   mapper = (*) <*> fromEnum . invalid . show
     where
     invalid :: String -> Bool
-    invalid str = any (flip (allEqual .: chunksOf) str) [1 .. (length str `div` 2)]
+    invalid str = any (flip (allEqual .: chunksOf) str) [1 .. length str `div` 2]
