@@ -6,11 +6,13 @@ module Utils
     module Data.Composition,
     amap,
     mapAdjacent,
+    allEqual,
     digitToInt,
     module Debug.Trace,
     numberLength,
     module Data.Maybe,
     module Control.Monad,
+    chunksOf,
   )
 where
 
@@ -24,9 +26,10 @@ import Data.Char (digitToInt)
 import Data.Composition
 import Data.Function
 import Data.List
-import Data.List.HT (mapAdjacent)
+import Data.List.HT (mapAdjacent, allEqual)
 import Data.Ord
 import GHC.Arr (amap)
+import Data.List.Split (chunksOf)
 
 -- Typedefs
 type Coord = (Int, Int)
