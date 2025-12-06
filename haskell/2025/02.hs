@@ -15,7 +15,7 @@ partOne :: Input -> Int
 partOne = sum . concatMap (map mapper . toRange)
   where 
   mapper :: Int -> Int 
-  mapper = (*) <*> fromEnum . phoenix (==) fst snd . halve . show
+  mapper = (*) <*> fromEnum . uncurry (==) . halve . show
 
 partTwo :: Input -> Int
 partTwo = sum . concatMap (map mapper . toRange)
