@@ -2,7 +2,6 @@
 
 module Mayn where
 
-import Criterion.Main
 import Language.Haskell.TH
 import Text.Megaparsec (errorBundlePretty)
 

@@ -125,6 +125,9 @@ project x y = traveller x y y
 traveller :: Coord -> Coord -> Coord -> Coord
 traveller x y = liftT2 (+) $ liftT2 (-) y x
 
+toRange :: Coord -> [Int]
+toRange (x, y) = [x .. y]
+
 -- Combinators
 phi :: (b -> y -> c) -> (a -> b) -> (x -> y) -> a -> x -> c
 phi bin un1 un2 a1 a2 = bin (un1 a1) (un2 a2)

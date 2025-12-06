@@ -113,3 +113,11 @@ executable 2024_17
 executable 2024_18
     import: aoc
     main-is: 2024/18.hs
+
+executable 2025_01
+    import: aoc
+    main-is: 2025/01.hs
+
+executable 2025_02
+    import: aoc
+    main-is: 2025/02.hs
